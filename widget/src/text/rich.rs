@@ -421,6 +421,45 @@ where
                     shell.capture_event();
                 }
             }
+            // Event::Touch(touch::Event::FingerPressed { position, .. }) => {
+            //     if layout.bounds().contains(*position) {
+            //         println!("Hey");
+            //         let state = tree
+            //             .state
+            //             .downcast_mut::<State<Link, Renderer::Paragraph>>();
+            //
+            //         self.hovered_link =
+            //             state.paragraph.hit_span(*position).and_then(|span| {
+            //                 if self
+            //                     .spans
+            //                     .as_ref()
+            //                     .as_ref()
+            //                     .get(span)?
+            //                     .link
+            //                     .is_some()
+            //                 {
+            //                     Some(span)
+            //                 } else {
+            //                     None
+            //                 }
+            //             });
+            //         state.span_pressed = self.hovered_link;
+            //         shell.capture_event();
+            //         if let Some(span) = self.hovered_link {
+            //             if let Some(link) = self
+            //                 .spans
+            //                 .as_ref()
+            //                 .as_ref()
+            //                 .get(span)
+            //                 .and_then(|span| span.link.clone())
+            //             {
+            //                 shell.publish(on_link_clicked(link));
+            //             }
+            //         }
+            //
+            //         state.span_pressed = None;
+            //     }
+            // }
             Event::Mouse(mouse::Event::ButtonReleased(mouse::Button::Left)) => {
                 let state = tree
                     .state
