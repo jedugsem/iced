@@ -1,0 +1,13 @@
+--- iced-o/core/src/text/editor.rs	2025-04-23 13:38:47.083332287 +0200
++++ iced/core/src/text/editor.rs	2025-04-23 13:49:57.361597749 +0200
+@@ -88,6 +88,10 @@
+         /// The amount of lines to scroll.
+         lines: i32,
+     },
++    /// Editor gained focus
++    Focus,
++    /// Editor lost focus
++    Blur,
+ }
+ 
+ impl Action {

@@ -1,0 +1,11 @@
+--- iced-o/graphics/src/text/editor.rs	2025-04-23 13:38:47.116236834 +0200
++++ iced/graphics/src/text/editor.rs	2025-04-23 13:52:25.065135072 +0200
+@@ -438,6 +438,8 @@
+                     cosmic_text::Action::Scroll { lines },
+                 );
+             }
++            // Do nothing, these are for user convenience only
++            Action::Focus | Action::Blur => {}
+         }
+ 
+         self.0 = Some(Arc::new(internal));
